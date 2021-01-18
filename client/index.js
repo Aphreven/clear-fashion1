@@ -53,7 +53,8 @@ console.log(cheapest_T_shirt);
 // 1. Create a variable and assign it the number of products
 // 2. Log the variable
 
-
+const numberOfProducts = marketplace.length;
+console.log(numberOfProducts);
 
 
 
