@@ -95,16 +95,24 @@ console.log(sortedByPrice);
 
 const sortDate= (a,b) =>a.date <b.date ? -1 : a.date ==b.date ? 0 :1;
 const sortedByDate = marketplace.sort(sortDate);
-console.log(sortedByDate)
+console.log(sortedByDate);
 // 🎯 TODO: Filter a specific price range
 // 1. Filter the list of products between 50€ and 100€
 // 2. Log the list
+
+console.log(marketplace.filter(product=> product.price >50 && product.price <100));
 
 
 // 🎯 TODO: Average Basket
 // 1. Determine the average basket of the marketplace
 // 2. Log the average
 
+var total = 0;
+for(var i = 0; i < marketplace.length; i++) {
+    total += marketplace[i].price;
+}
+var avg = total / marketplace.length;
+console.log(avg);
 
 
 
