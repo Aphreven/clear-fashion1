@@ -63,16 +63,16 @@ console.log(numberOfProducts);
 // 2. Log the variable
 // 3. Log how many brands we have
 
-const brand_names =[]
+const brand_names =[];
 for (const product of marketplace)
 {
   if(!(brand_names.includes(product.brand)))
   {
-    brand_names.push(product.brand)
+    brand_names.push(product.brand);
   }
 }
 
-console.log(brand_names.length)
+console.log(brand_names.length);
 
 
 // 🎯 TODO: Sort by price
@@ -81,6 +81,12 @@ console.log(brand_names.length)
 // 3. Log the variable
 
 
+
+marketplace.sort(function(a,b){
+  return a.price-b.price;
+});
+
+console.log(marketplace);
 
 
 // 🎯 TODO: Sort by date
