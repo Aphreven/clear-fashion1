@@ -72,7 +72,8 @@ for (const product of marketplace)
   }
 }
 
-// 
+const brandsList = marketplace.map(product => product.brand);
+console.log(new Set(brandsList));
 
 console.log(brand_names.length);
 
@@ -153,17 +154,27 @@ for (const product of marketplace)
 {
   brands[product.brand].push(product);
 }
-console.log(brands)
+console.log(brands);
 
 
 // 🎯 TODO: Sort by price for each brand
 // 1. For each brand, sort the products by price, from highest to lowest
 // 2. Log the sort
 
-for (const[key,value] of Object.entries(brands))
+
+console.log(brands["adresse"])
+
+
+for(const brand of brand_names)
 {
-  console.lo
-}
+  console.log(brand)
+  brands[brand].sort(function(a,b){
+  return a.price-b.price}).reverse(); 
+};
+
+brands["1083"].reverse()
+console.log(brands["1083"])
+console.log(brands)
 
 // 🎯 TODO: Sort by date for each brand
 // 1. For each brand, sort the products by date, from old to recent
